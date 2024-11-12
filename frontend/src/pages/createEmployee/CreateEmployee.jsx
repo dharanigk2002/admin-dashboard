@@ -39,7 +39,9 @@ function CreateEmployee() {
         if (
           key === "image" &&
           !id &&
-          !["png", "jpg"].includes(formData[key].name.split(".").pop())
+          !["png", "jpg"].includes(
+            formData[key].name.split(".").pop().toLowerCase()
+          )
         )
           newErrors[key] = "Image should be either in jpg or png format";
       }

@@ -19,7 +19,9 @@ export async function createEmployee(req, res) {
         .status(400)
         .json({ success: false, message: "Invalid mobile number" });
     const profile = req.file;
-    const extn = ["jpg", "png"].includes(profile.filename.split(".").pop());
+    const extn = ["jpg", "png"].includes(
+      profile.filename.split(".").pop().toLowerCase()
+    );
     if (!extn)
       return res.status(400).json({
         success: false,
