@@ -1,0 +1,54 @@
+.formWrapper {
+  width: 100%;
+  max-width: 780px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  & h1 {
+    text-align: center;
+    color: rgb(70, 221, 70);
+  }
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.loginForm .inputField {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  & label {
+    font-size: 20px;
+    flex: 1;
+  }
+  & div {
+    width: 100%;
+    flex: 1;
+    input {
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+    .error {
+      color: red;
+      height: 1em;
+      font-size: 12px;
+    }
+  }
+}
+
+.loginForm button {
+  font-size: 15px;
+  display: inline-block;
+  padding: 5px 10px;
+  align-self: center;
+  cursor: pointer;
+  margin-top: 20px;
+}

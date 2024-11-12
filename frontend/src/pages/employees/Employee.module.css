@@ -1,0 +1,40 @@
+.employeeWrapper {
+  padding: 35px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.employeeWrapper > div {
+  display: flex;
+  justify-content: space-between;
+  div {
+    display: flex;
+    gap: 15px;
+    input {
+      padding: 2px 5px;
+    }
+    button {
+      cursor: pointer;
+    }
+  }
+}
+
+table {
+  border: 2px solid;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid;
+  padding: 10px;
+}
+
+.alert {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

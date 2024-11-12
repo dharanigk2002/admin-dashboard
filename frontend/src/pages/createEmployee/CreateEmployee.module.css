@@ -1,0 +1,63 @@
+.formWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  & h1 {
+    text-align: center;
+    color: rgb(70, 221, 70);
+  }
+}
+
+.formWrapper .profile {
+  width: 45px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  border: 3px solid rgb(48, 43, 43);
+  left: 2rem;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.loginForm .inputField {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  & label {
+    font-size: 20px;
+    flex: 0.5;
+  }
+  & div {
+    flex: 1;
+    input {
+      width: 100%;
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+    .error {
+      color: red;
+      height: 1em;
+      font-size: 12px;
+    }
+  }
+}
+
+.loginForm button {
+  font-size: 15px;
+  display: inline-block;
+  padding: 5px 10px;
+  align-self: center;
+  cursor: pointer;
+  margin-top: 20px;
+}
