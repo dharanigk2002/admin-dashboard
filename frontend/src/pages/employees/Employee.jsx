@@ -4,7 +4,7 @@ import styles from "./Employee.module.css";
 import { useEffect, useState } from "react";
 
 function Employee() {
-  const [employees, setEmployees] = useState(null);
+  const [employees, setEmployees] = useState([]);
   const [loading, setLoading] = useState(false);
   const [filteredData, setFilteredData] = useState(null);
   const data = filteredData || employees;
@@ -44,14 +44,14 @@ function Employee() {
         month: "short",
         year: "2-digit",
       })
-      .replace(" ", "-");
+      .replaceAll(" ", "-");
   }
   if (loading) return <h1 className={styles.alert}>Loading...</h1>;
-  else if (!loading && !employees)
+  if (!loading && employees.length === 0)
     return (
       <div className={styles.alert}>
         <h1>No employees Found</h1>
-        <button>Create employee</button>
+        <button onClick={() => navigate("/create")}>Create employee</button>
       </div>
     );
   return (
